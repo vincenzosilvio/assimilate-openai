@@ -1,5 +1,4 @@
-black
-pytest
-openai
-ipython
-click
+black==22.8.0
+pytest==7.1.2
+openai==0.23.0
+click==8.1.3
