@@ -2,6 +2,11 @@
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
+## Day 3:  CI/CD and Refactor
+
+* [how to generate code programatically](https://beta.openai.com/docs/guides/code)
+
+
 ## Day 2:  
 
 * [Build Question and Answer CLI](https://github.com/nogibjj/assimilate-openai/blob/main/questionAnswerCLI.py)
