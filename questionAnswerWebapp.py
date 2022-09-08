@@ -1,6 +1,5 @@
 import streamlit as st
 import openai
-import os 
 
 # Get the OpenAI API Key
 api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
@@ -10,7 +9,7 @@ st.title("🕹️ AI Question Answering Bot")
 
 st.write("_**Intelligent QA bot that will answer all your questions in zero shot based on the context from the internet.**_")
 
-question = st.text_input('Input Question 👇')
+QUESTION = st.text_input('Input Question 👇')
 
 @st.cache
 def submit_question(question):
@@ -33,7 +32,7 @@ def submit_question(question):
 
 if st.button('Submit'):
     st.write('**Output**')
-    st.write(f"""---""")
+    st.write("""---""")
     with st.spinner(text='In progress'):
-        report_text = submit_question(question)
+        report_text = submit_question(QUESTION)
         st.markdown(report_text)
