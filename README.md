@@ -4,6 +4,7 @@ An extensive collection of tutorials and live streams on [OpenAi](https://openai
 
 ## Day 2:  
 
+* [Build Question and Answer CLI](https://github.com/nogibjj/assimilate-openai/blob/main/questionAnswerCLI.py)
 
 ## Day 1:  Exploring all of the concepts
 
