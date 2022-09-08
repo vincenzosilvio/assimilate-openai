@@ -1,11 +1,12 @@
+[![Python application test with Github Actions using devcontainers](https://github.com/nogibjj/assimilate-openai/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/assimilate-openai/actions/workflows/main.yml)
+
 # assimilate-openai
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
-## Day 3:  CI/CD and Refactor
+## Day 3:  CI/CD and Refactor and built working streamlit app that generates code
 
 * [how to generate code programatically](https://beta.openai.com/docs/guides/code)
-
 
 ## Day 2:  
 
