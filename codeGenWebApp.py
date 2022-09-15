@@ -1,3 +1,5 @@
+#notes on running:  https://docs.streamlit.io/knowledge-base/deploy/remote-start
+
 import streamlit as st
 from oalib.solutions import create_code
 
