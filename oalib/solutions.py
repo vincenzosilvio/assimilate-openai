@@ -9,6 +9,7 @@ For building code:  https://beta.openai.com/docs/guides/code/introduction
 import openai
 import os
 
+
 def submit_question(text):
     """This submits a question to the OpenAI API"""
 
@@ -26,15 +27,16 @@ def submit_question(text):
     )["choices"][0]["text"].strip(" \n")
     return result
 
-#build a function that converts a comment into code in any language
+
+# build a function that converts a comment into code in any language
 def create_code(text, language):
     """This submits a comment to the OpenAI API to create code in any languag
-    
+
     Example:
-        language = '# Python3' 
+        language = '# Python3'
         text = f"Calculate the mean distance between an array of points"
         create_code(text, language)
-    
+
     """
     openai.api_key = os.getenv("OPENAI_API_KEY")
     prompt = f"## {language}\n\n{text}"
@@ -49,5 +51,3 @@ def create_code(text, language):
         model="davinci-codex",
     )["choices"][0]["text"].strip(" \n")
     return result
-
-

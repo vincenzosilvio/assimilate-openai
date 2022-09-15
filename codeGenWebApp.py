@@ -8,6 +8,6 @@ language = st.text_input("Language", "python")
 text = st.text_area("Comment", "Calculate the mean distance between an array of points")
 
 if st.button("Generate Code"):
-    with st.spinner(text='In progress'):
+    with st.spinner(text="In progress"):
         code = create_code(text, language)
         st.code(code)

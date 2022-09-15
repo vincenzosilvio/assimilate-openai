@@ -7,17 +7,20 @@ api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
 # Setting up the Title
 st.title("🕹️ AI Question Answering Bot")
 
-st.write("_**Intelligent QA bot that will answer all your questions in zero shot based on the context from the internet.**_")
+st.write(
+    "_**Intelligent QA bot that will answer all your questions in zero shot based on the context from the internet.**_"
+)
 
-QUESTION = st.text_input('Input Question 👇')
+QUESTION = st.text_input("Input Question 👇")
+
 
 @st.cache
 def submit_question(question):
     """This submits a question to the OpenAI API"""
-    
+
     # Setting the OpenAI API key got from the OpenAI dashboard
     openai.api_key = api_key
-    
+
     result = openai.Completion.create(
         prompt=question,
         temperature=0,
@@ -30,9 +33,9 @@ def submit_question(question):
     return result
 
 
-if st.button('Submit'):
-    st.write('**Output**')
+if st.button("Submit"):
+    st.write("**Output**")
     st.write("""---""")
-    with st.spinner(text='In progress'):
+    with st.spinner(text="In progress"):
         report_text = submit_question(QUESTION)
         st.markdown(report_text)

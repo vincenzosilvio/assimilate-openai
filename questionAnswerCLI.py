@@ -8,6 +8,7 @@ This uses an advanced GPT-3 model and I also used AI via Github Copilot to write
 import click
 from oalib.solutions import submit_question
 
+
 @click.command()
 @click.argument("text")
 def main(text):

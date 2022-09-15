@@ -2,10 +2,15 @@
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
+## Day 4:  Setup prebuild for Codespaces and dive deep on Streamlit
+
+`streamlit-apps`:  Using this as the starter.
+
+* To run streamlit inside of Github codespaces do this:  `streamlit run streamlit/uberDemo.py --server.enableCORS=false`
+
 ## Day 3:  CI/CD and Refactor
 
 * [how to generate code programatically](https://beta.openai.com/docs/guides/code)
-
 
 ## Day 2:  
 

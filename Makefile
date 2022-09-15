@@ -6,9 +6,13 @@ test:
 	python -m pytest -vv test_*.py
 
 format:
-	black *.py
+	black *.py oalib/*.py \
+		streamlit-apps/uberDemo.py
+
+refactor: format lint
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py oalib/*.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py oalib/*.py \
+		streamlit-apps/uberDemo.py
 
 all: install lint test
