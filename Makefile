@@ -12,7 +12,6 @@ format:
 refactor: format lint
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py oalib/*.py \
-		streamlit-apps/uberDemo.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py oalib/*.py 
 
 all: install lint test
