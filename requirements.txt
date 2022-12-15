@@ -7,3 +7,4 @@ ipython
 pylint
 pytest
 fire
+git+https://github.com/openai/whisper.git 
