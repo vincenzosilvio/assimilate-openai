@@ -6,3 +6,4 @@ streamlit
 ipython
 pylint
 pytest
+fire

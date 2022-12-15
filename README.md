@@ -5,6 +5,11 @@
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
+## Day 5:  Testing ChatGPT
+
+
+
+
 ## Day 4:  Setup prebuild for Codespaces and dive deep on Streamlit
 
 `streamlit-apps`:  Using this as the starter.
