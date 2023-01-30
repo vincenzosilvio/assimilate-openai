@@ -5,8 +5,42 @@
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
-## Day 5:  Testing ChatGPT
+## Day 6: Switching to Rust  
 
+* install Rust via Rustup: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+Use Rust API for OpenAI (3rd party):  https://github.com/deontologician/openai-api-rust
+
+* Create new project: `cargo new openai` and cd into it
+* `make format` then `make lint` then `cargo run`
+
+Working Example:
+
+```bash
+(.venv) @noahgift ➜ /workspaces/assimilate-openai/openai (main) $ cargo run -- complete -t "The rain in spain"
+    Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+     Running `target/debug/openai complete -t 'The rain in spain'`
+Completing: The rain in spain
+Loves gets you nowhere
+The rain in spain
+```
+
+`lib.rs`
+```rust
+/*This uses Open AI to Complete Sentences */
+
+//accets the prompt and returns the completion
+pub async fn complete_prompt(prompt: &str) -> Result<String, Box<dyn std::error::Error>> {
+    let api_token = std::env::var("OPENAI_API_KEY")?;
+    let client = openai_api::Client::new(&api_token);
+    let prompt = String::from(prompt);
+    let result = client.complete_prompt(prompt.as_str()).await?;
+    Ok(result.choices[0].text.clone())
+}
+
+```
+
+
+## Day 5:  Testing ChatGPT
 
 
 

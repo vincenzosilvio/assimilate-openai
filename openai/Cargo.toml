@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 openai-api = "0.1.4"
+tokio = { version = "^0.2.5", features = ["full"]}
+clap = {version="4.0.32", features=["derive"]}
+thiserror = "^1.0.22"
