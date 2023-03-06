@@ -7,6 +7,17 @@ An extensive collection of tutorials and live streams on [OpenAi](https://openai
 
 ## Day 8:  Try to build a chatGTP client from scratch
 
+Fixed it:
+
+```bash
+(.venv) @noahgift ➜ /workspaces/assimilate-openai/rust-curl-openai (main) $ cargo run
+   Compiling reqwest v0.11.14
+   Compiling rust-curl-openai v0.1.0 (/workspaces/assimilate-openai/rust-curl-openai)
+    Finished dev [unoptimized + debuginfo] target(s) in 4.78s
+     Running `target/debug/rust-curl-openai`
+{"id":"cmpl-6rDd8mzOtMx7kKobqV0isiC7TkqU4","object":"text_completion","created":1678141798,"model":"text-davinci-003","choices":[{"text":"\n\nJupiter is the fifth planet from the Sun and the biggest one in our Solar System. It is very bright and can be seen in the night sky. It is named after the Roman god Jupiter. It is usually the third brightest thing you can see in the night sky after the Moon and Venus.","index":0,"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":151,"completion_tokens":62,"total_tokens":213}}
+```
+
 Partial progress here:  `rust-curl-openai`, but don't fully understand API yet.
 
 A.  find a Rust library that does basic web requests like Python requests
