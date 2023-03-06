@@ -5,6 +5,17 @@
 
 An extensive collection of tutorials and live streams on [OpenAi](https://openai.com/)
 
+## Day 8:  Try to build a chatGTP client from scratch
+
+
+## Day 7:  More Rust
+
+Ran into some problems with unfinished APIS.  Did find an example of chatgpt with Rust:  https://github.com/elbruno/RustOpenAIAPIs
+Recap of the previous project which is in openai:
+
+`cargo run -- complete -t "The weather in March is warmer than usual, this is because"`
+
+
 ## Day 6: Switching to Rust  
 
 * install Rust via Rustup: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
