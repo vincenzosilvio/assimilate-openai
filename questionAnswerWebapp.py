@@ -1,5 +1,6 @@
 import streamlit as st
 import openai
+import os
 
 # Get the OpenAI API Key
 api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
@@ -15,22 +16,20 @@ QUESTION = st.text_input("Input Question 👇")
 
 
 @st.cache
-def submit_question(question):
+def submit_question(text):
     """This submits a question to the OpenAI API"""
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    # Setting the OpenAI API key got from the OpenAI dashboard
-    openai.api_key = api_key
+    
+    completion = openai.ChatCompletion.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant. Please keep your responses concise"},
+            {"role": "user", "content": text},
+        ],
+    )
 
-    result = openai.Completion.create(
-        prompt=question,
-        temperature=0,
-        max_tokens=300,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0,
-        model="text-davinci-002",
-    )["choices"][0]["text"].strip(" \n")
-    return result
+    return completion.choices[0].message.content
 
 
 if st.button("Submit"):
